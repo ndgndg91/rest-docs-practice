@@ -14,7 +14,6 @@ import org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
@@ -58,7 +57,6 @@ class UserRestControllerTest {
                 .email("ndgndg91@gmail.com")
                 .password("123123")
                 .build();
-        given(userRepository.save(user)).willReturn(user);
         given(userRepository.findById(1L)).willReturn(Optional.of(user));
         UserResponse response = new UserResponse(user);
 

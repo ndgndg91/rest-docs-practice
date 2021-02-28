@@ -1,6 +1,11 @@
 spring:
+  jpa:
+    open-in-view: false
   datasource:
     url: jdbc:mysql://localhost:3307/rest_docs_practice
     username: rest_docs_user
     password: rest_docs_user
     driver-class-name: com.mysql.cj.jdbc.Driver
+logging:
+  level:
+    web: debug

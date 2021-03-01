@@ -1,7 +1,9 @@
-= User Apis
+= Apis Documentation
+:toc-title: Api Menu
 :toc: left
 :toclevels: 4
 
+## User Apis
 ### User 조회
 include::user-find-by-id.adoc[]
 ### User 회원 가입

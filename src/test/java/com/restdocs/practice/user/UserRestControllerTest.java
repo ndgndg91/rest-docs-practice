@@ -23,7 +23,9 @@ import org.springframework.web.context.WebApplicationContext;
 
 import java.util.Optional;
 
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.doNothing;
 import static org.springframework.restdocs.headers.HeaderDocumentation.headerWithName;
 import static org.springframework.restdocs.headers.HeaderDocumentation.responseHeaders;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
@@ -112,6 +114,24 @@ class UserRestControllerTest {
                 ),
                 responseHeaders(
                         headerWithName("Location").description("user resource")
+                )
+        ));
+    }
+
+    @Test
+    void withdrawal() throws Exception {
+        //given
+        doNothing().when(userRepository).deleteById(anyLong());
+
+        //when
+        ResultActions resultActions = this.mockMvc.perform(RestDocumentationRequestBuilders.delete("/apis/users/{id}", anyLong()))
+                .andDo(print())
+                .andExpect(status().isOk());
+
+        //then
+        resultActions.andDo(document("withdrawal",
+                pathParameters(
+                        parameterWithName("id").description("The user id")
                 )
         ));
     }

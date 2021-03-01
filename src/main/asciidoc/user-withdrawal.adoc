@@ -1,0 +1,14 @@
+.curl
+include::{snippets}/withdrawal/curl-request.adoc[]
+
+.httpie
+include::{snippets}/withdrawal/httpie-request.adoc[]
+
+.request
+include::{snippets}/withdrawal/http-request.adoc[]
+
+.path-parameter
+include::{snippets}/withdrawal/path-parameters.adoc[]
+
+.response
+include::{snippets}/withdrawal/http-response.adoc[]

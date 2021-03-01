@@ -1,6 +1,6 @@
 = Apis Documentation
 :toc-title: Api Menu
-:toc: left
+:toc: right
 :toclevels: 4
 
 ## User Apis

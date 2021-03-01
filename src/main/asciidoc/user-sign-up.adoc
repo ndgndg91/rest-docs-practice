@@ -1,0 +1,11 @@
+.curl
+include::{snippets}/sign-up/curl-request.adoc[]
+
+.httpie
+include::{snippets}/sign-up/httpie-request.adoc[]
+
+.request
+include::{snippets}/sign-up/http-request.adoc[]
+
+.response
+include::{snippets}/sign-up/http-response.adoc[]

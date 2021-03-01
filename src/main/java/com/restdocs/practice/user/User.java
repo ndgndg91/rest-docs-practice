@@ -1,15 +1,13 @@
 package com.restdocs.practice.user;
 
 import com.restdocs.practice.core.BaseEntity;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Getter
 @Entity
+@EqualsAndHashCode(of = "id", callSuper = true)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class User extends BaseEntity {
 

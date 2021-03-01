@@ -1,22 +1,10 @@
 = User Apis
+:toc: left
+:toclevels: 4
 
-.curl
-include::{snippets}/findById/curl-request.adoc[]
-
-.httpie
-include::{snippets}/findById/httpie-request.adoc[]
-
-.request
-include::{snippets}/findById/http-request.adoc[]
-
-.path-parameter
-include::{snippets}/findById/path-parameters.adoc[]
-
-.response
-include::{snippets}/findById/http-response.adoc[]
-
-.response-body
-include::{snippets}/findById/response-body.adoc[]
-
-.response-fields
-include::{snippets}/findById/response-fields.adoc[]
+### User 조회
+include::user-find-by-id.adoc[]
+### User 회원 가입
+include::user-sign-up.adoc[]
+### User 탈퇴
+include::user-withdrawal.adoc[]
